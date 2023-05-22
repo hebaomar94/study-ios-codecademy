@@ -87,3 +87,65 @@ for _ in 1...stopNum {
   starTracker += "*" 
   print(starTracker)
 }
+
+//set
+// Add your code below 🔤
+var consonants = Set <Character>()
+var vowels: Set = ["A", "E", "I", "O", "U"]
+print(vowels)
+
+//.count and .isEmpty
+//if we want to know if set is empty or not 
+setName.isEmpty
+
+
+//If we want to add new elements to our set, we can use Swift’s built-in .insert() method.
+//We can use .insert() to add elements to a set using this syntax:
+
+setName.insert(NewValue)
+
+//To remove this value from plantShelf using .remove(), we can use this code:
+//If we wanted to remove every single element from a set, we could use the .removeAll() method
+//if we want to checking on value exist or not we can use .contains()
+
+//Iterating Through a Set
+/*
+for Value in setName {
+  // Body of loop
+} */
+
+If you only want multi-line strings to format your code neatly, and you don’t want those line breaks to actually be in your string, end each line with a \, like this:
+
+var str2 = """
+This goes \
+over multiple \
+lines
+"""
+//course hackingswift
+var greeting = "Hello, playground"
+print(greeting)
+var name = "heba"
+print(name)
+let quote = "then he tapped a sign saying \"believe\" and walked away"
+print(quote)
+
+let movie = """
+A day in
+the life of an
+Apple engineer
+"""
+//print(movie.uppercased())
+print(movie.hasPrefix("A day"))
+
+/*
+The last piece of helpful string functionality is called hasPrefix(), and lets us know whether a string starts with some letters of our choosing:
+
+print(movie.hasPrefix("A day"))
+There’s also a hasSuffix() counterpart, which checks whether a string ends with some text:
+
+print(filename.hasSuffix(".jpg"))
+Important: Strings are case-sensitive in Swift, which means using filename.hasSuffix(".JPG") will return false because the letters in the string are lowercase.
+
+Strings are really powerful in Swift, and we’ve only really scratched the surface of what they can do!
+*/
+
