@@ -157,3 +157,16 @@ print(number.isMultiple(of: 3))
 I’m calling isMultiple(of:) on a constant there, but you can just use the number directly if you want:
 
 print(120.isMultiple(of: 3))
+
+//intersection method - to find matching values in two different sets:
+var newSet = SetA.intersection(SetB)
+
+//can use is .union(). This operation creates a set by combining the values of two sets together.
+var NewSet = SetA.union(SetB)
+
+//The .symmetricDifference() operation can be used to find elements that exist in one of the given sets, but not both.
+//.subtracting(). This method creates a new set of elements by removing the overlapping data of one set from another set.
+
+
+
+
