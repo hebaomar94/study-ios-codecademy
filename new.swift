@@ -148,4 +148,12 @@ Important: Strings are case-sensitive in Swift, which means using filename.hasSu
 
 Strings are really powerful in Swift, and we’ve only really scratched the surface of what they can do!
 */
+Before we’re done with integers, I want to mention one last thing: like strings, integers have some useful functionality attached. For example, you can call isMultiple(of:) on an integer to find out whether it’s a multiple of another integer.
 
+So, we could ask whether 120 is a multiple of three like this:
+
+let number = 120
+print(number.isMultiple(of: 3))
+I’m calling isMultiple(of:) on a constant there, but you can just use the number directly if you want:
+
+print(120.isMultiple(of: 3))
