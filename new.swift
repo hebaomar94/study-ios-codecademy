@@ -190,6 +190,10 @@ There are lots of built-in arithmetic operators, such as +, -, *, and /, along w
 You can represent a simple true or false state using a Boolean, which can be flipped using the ! operator or by calling toggle().
 String interpolation lets us place constants and variables into our strings in a streamlined, efficient way.
 */
-
+//Checkpoint 1 of Swift for Complete Beginners asks you to create an Xcode playground able to convert any value of Celsius into Fahrenheit, then print the result
+let celsius = 32.5
+let fah = (celsius * 9 / 5)+32
+//if you press Option+Shift+8 you get a nice degrees symbol, °,
+print ("\(celsius)°c \(fah)°f")
 
 
