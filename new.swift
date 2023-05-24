@@ -197,4 +197,20 @@ let fah = (celsius * 9 / 5)+32
 //if you press Option+Shift+8 you get a nice degrees symbol, °,
 print ("\(celsius)°c \(fah)°f")
 
+//dictionary 
+// we can creat empty dictionary but we need to define 
+
+//var dictionaryName = [keyType: valueType] ()
+var country = [Int: Int] () // empty dictionary
+
+
+/* create an empty dictionary with String type keys and Int type values using dictionary literal syntax, 
+our code would look like this:
+*/
+var myDictionary: [String: Int] = [:]
+
+//using dictionary literal syntax.
+var emptyLiteral: [String: Int] = [:]
+//using initializer syntax method.
+var emptyInitializer = [String: Bool] ()
 
