@@ -214,4 +214,65 @@ var emptyLiteral: [String: Int] = [:]
 //using initializer syntax method.
 var emptyInitializer = [String: Bool] ()
 
+/*
+If we wanted to add a new key-value to 
+a dictionary, we could use the following subscript syntax:
+dictionaryName[NewKey] = NewValue
+*/
+
+//add new value to dictionary 
+var teaSteepingTemperature = [
+  "Black": 212,
+  "Oolong": 185,
+  "White": 185
+]
+
+// Add your code below 🍵
+teaSteepingTemperature ["Green"] = 185
+
+/*
+If we used the .updateValue() method to modify "Taylor Swift" in musicGenre, we could use this code:
+
+musicGenre.updateValue("Pop", forKey: "Taylor Swift")
+*/
+//another way 
+musicGenre["Taylor Swift"] = "Pop"
+
+// nil in swift means empty if we put any value = nil that means we remove it 
+//dictionaryName[Key]= nil
+/*
+We can also remove a single key-value pair using the
+.removeValue() method:
+dictionaryName.removeValue(forKey: Key)*/
+
+//if-let statements are used to check if a real value exists inside of an optional. 
+/*
+If we are absolutely positive a key exists within a dictionary, we can add ! at the end of the statement like so:
+var appleScientific = fruitNames["apple"]! */
+
+/*If we wanted to loop through every key and value in a dictionary using a for-in loop, the syntax would look as follows:
+
+for (keyHolder, valueHolder) in dictionaryName {
+  // Body of loop
+} */
+var classGrades = [
+  "Raymond": 100,
+  "Rosa": 82,
+  "Jake": 73,
+  "Terry": 90
+]
+ 
+for (name, grade) in classGrades {
+  print("\(name) has a grade of \(grade)")
+}
+//tubles can store two verity type
+
+
+
+
+
+
+
+
+
 
