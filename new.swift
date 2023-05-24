@@ -267,7 +267,11 @@ for (name, grade) in classGrades {
 }
 //tubles can store two verity type
 
-
+var scores = Array<Int>()
+scores.append(100)
+scores.append(80)
+scores.append(85)
+print(scores[1])
 
 
 
