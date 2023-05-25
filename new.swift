@@ -325,7 +325,11 @@ day = .friday
 Swift knows that .tuesday must refer to Weekday.tuesday because day must always be some kind of Weekday.
 
 
-
+let username: String
+// lots of complex logic
+username = "@twostraws"
+// lots more complex logic
+print(username)
 
 
 
