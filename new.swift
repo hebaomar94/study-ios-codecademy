@@ -335,4 +335,13 @@ print(username)
 
 Enums let us create our own simple types in Swift so that we can specify a range of acceptable values such as a list of actions the user can perform, the types of files we are able to write, or the types of notification to send to the user.*/
 
+//function 
+// Write your code below 🛫
+func timeToDestination( distance: Int, speed: Int)  -> Int {
+ let time = distance / speed 
+ return time
+}
+
+print(timeToDestination(distance: 6836, speed: 560))
+
 
