@@ -344,4 +344,18 @@ func timeToDestination( distance: Int, speed: Int)  -> Int {
 
 print(timeToDestination(distance: 6836, speed: 560))
 
+/*
+Argument Labels
+The ability to write readable, succinct, and expressive code is a valuable skill to possess as a developer.
+
+Consider this function that sets the temperature of an oven:*/
+
+
+func setOvenTemperature(temperature: Int) {
+ 
+    print("The oven is now set to \(temperature) degrees.")
+ 
+}
+
+
 
