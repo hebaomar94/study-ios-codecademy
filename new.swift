@@ -345,6 +345,44 @@ func timeToDestination( distance: Int, speed: Int)  -> Int {
 
 print(timeToDestination(distance: 6836, speed: 560))
 
+
+
+//Parameters and Arguments
+// Write your code below 🥧
+/*In Circumference.swift, 
+define a function, findCircumference(), 
+that will accept a diameter parameter of type 
+Double, and return a Double type.
+Within findCircumference(), 
+use the return keyword to return the expression, 
+3.14 * diameter
+*/
+func findCircumference (diameter: Double) -> Double 
+{
+ return 3.14 * diameter
+}
+
+/*Call the function 
+and pass in a number argument 
+for the diameter parameter.
+ Save this function call in the variable, 
+ result.
+On the following line, 
+print the value of result*/
+var result = findCircumference(diameter: 5)
+print(result)
+
+//Multiple Parameters
+// Write your code below 🛫
+//timeToDestination() should accept distance and speed parameters of type Int
+
+func timeToDestination(distance: Int , speed: Int) -> Int {
+  let time =  distance / speed
+  return time
+}
+var result = timeToDestination(distance: 6836 , speed: 560)
+print(result)
+
 /*
 Argument Labels
 The ability to write readable, succinct, and expressive code is a valuable skill to possess as a developer.
@@ -358,5 +396,41 @@ func setOvenTemperature(temperature: Int) {
  
 }
 
+//Omitting Argument Labels
+/*can be used in front of a parameter name in the function 
+definition to allow for that parameter name to be omitted in the function call.*/
+let adults = 2
+let students = 15 
+
+// Write your code below 🏛️
+
+func museumEntry(_ numAdults: Int, _ numStudents: Int) -> Int {
+
+  let studentTicket = 14
+  let adultTicket = 25
+
+  let total = studentTicket * numStudents + adultTicket * numAdults
+
+  return total 
+}
+
+print(museumEntry(adults, students))
+
+//Returning Multiple Values
+// Write your code below 😋
+/*func favoriteCuisine() -> (name: String, dish: String)
+{
+  return("coc", "prok")
+}
+
+let cuisine = favoriteCuisine()
+print("My favorite \(cuisine.name) dish is \(cuisine.dish)!")
+*/
+
+func favoriteCuisine() -> (name: String, dish: String) {
+  return ("Italian", "Spagitti")
+}
+let cuisine = favoriteCuisine()
+print ("My favorite \(cuisine.name) dish is \(cuisine.dish)!")
 
 
