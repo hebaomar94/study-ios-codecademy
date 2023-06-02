@@ -471,7 +471,21 @@ func avgSongLength(times: Int...) -> Int {
  print(avgSongLength(times: 183, 176, 180, 176, 
  184, 179, 181, 180, 172, 178))
 
-
+var currentShoes = "🥿"
+ 
+func properAttire(occasion: String, shoes: inout String) {
+  if occasion == "Party" {
+    shoes = "👠"
+  } else if occasion == "Workout" {
+    shoes = "👟"
+  } else {
+    shoes = "🥿"
+  }
+}
+ 
+properAttire(occasion: "Workout", shoes: &currentShoes)
+ 
+print(currentShoes)
 
 
 
