@@ -433,4 +433,71 @@ func favoriteCuisine() -> (name: String, dish: String) {
 let cuisine = favoriteCuisine()
 print ("My favorite \(cuisine.name) dish is \(cuisine.dish)!")
 
+//Implicit Return
+// Write your code below ➗
+func findRemainder(dividend: Int, divisor: Int) -> Int{
+ dividend % divisor
+}
+print (findRemainder(dividend: 10, divisor: 4))
+
+
+//Default Parameters
+// Write your code below 🎫
+func bookingTicket(passengerName: String = "heba", seatClass: String = "Economy",timeOfDeparture: Int ) -> String{
+ return "\(passengerName), your seat class is \(seatClass), and you will be departing at \(timeOfDeparture)."
+ 
+}
+
+print (bookingTicket(timeOfDeparture: 9))
+print (bookingTicket(seatClass: "Business", timeOfDeparture: 9))
+
+
+
+
+//Variadic Parameters
+//A variadic parameter is a parameter that accepts zero or more values of a certain type. A variadic parameter is useful for cases in which we may need to pass in more than one value for a single parameter.
+// Write your code below 🎶
+
+func avgSongLength(times: Int...) -> Int {
+  var total = 0
+  for time in times {
+    total += time
+
+  }
+
+ return total / times.count
+}
+
+ print(avgSongLength(times: 183, 176, 180, 176, 
+ 184, 179, 181, 180, 172, 178))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
