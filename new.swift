@@ -565,7 +565,145 @@ var isActive : Bool
 //creat instance of band
 var maroon5 = Band (genre: "pop", members: 5, isActive: true  )
 
+struct Band {
+  var genre: String
+  var members: Int
+  var isActive: Bool
+  
+  init(genre: String, members: Int, isActive: Bool) {
+    self.genre = genre
+    self.members = members
+    self.isActive = isActive
+  }
+  //instance method like func method but the different its specific to instance 
+  // doesnt take any para
+  //we call instnce method after the method name 
+  // Add your method below 🤘
+  func pumpUpCrowd() -> String {
+    //self.isActive = true
+    if self.isActive {
+      return  "Are you ready to ROCK?"
+    } else {
+       return "..."
+    }
+  }
+  
+}
 
+// Create your instance below 🎸 🥁 
+var fooFighters = Band (genre: "rock",
+members: 6,
+isActive: true)
+print (fooFighters.pumpUpCrowd()
+)
+
+struct Band {
+  var genre: String
+  var members: Int
+  var isActive: Bool
+  
+  init(genre: String, members: Int, isActive: Bool) {
+    self.genre = genre
+    self.members = members
+    self.isActive = isActive
+  }
+  
+  func pumpUpCrowd() -> String {
+    if self.isActive {
+      return "Are you ready to ROCK?"
+    } else {
+      return "..."
+    }
+  }
+  
+  // Add your mutating method below 🔧
+  mutating func changeGenre(newGenre: String) -> String{
+  
+    self.genre = newGenre
+    return self.genre
+  }
+  
+}
+
+var journey = Band(genre: "jazz", members: 5, isActive: true)
+var bandsNewGenre = journey .changeGenre(newGenre: "rock")
+print(bandsNewGenre)
+// Change the genre below 🎸 🔨
+
+
+struct Band {
+  var genre: String
+  var members: Int
+  var isActive: Bool
+  
+  init(genre: String, members: Int, isActive: Bool) {
+    self.genre = genre
+    self.members = members
+    self.isActive = isActive
+  }
+  
+  func pumpUpCrowd() -> String {
+    if self.isActive {
+      return "Are you ready to ROCK?"
+    } else {
+      return "..."
+    }
+  }
+  
+  mutating func changeGenre(newGenre: String) -> String {
+    self.genre = newGenre
+    return self.genre
+  } 
+  
+}
+
+var journey = Band(genre: "rock", members: 5, isActive: true)
+
+// Add your code below 📻  
+print (type(of: journey)
+)
+var bts: Band = Band(genre: "kpop", members: 7,
+isActive: true)
+
+struct Finch {
+  var lengthInCm: Double
+  var nestLocation: String
+
+  init(lengthInCm: Double, nestLocation: String) {
+    self.lengthInCm = lengthInCm
+    self.nestLocation = nestLocation
+  }
+}
+
+var groundFinch = Finch(lengthInCm: 15.0, nestLocation: "Bush")
+
+// Add your code below 🐦
+//Structures are Value Types
+var cactusFinch = groundFinch 
+cactusFinch.nestLocation = "Cactus"
+print(cactusFinch.nestLocation)
+print(groundFinch.nestLocation)
+
+/*
+Review
+Wonderful job, we’ve successfully created our own data type using structures and modeled dogs, books, and birds in our code!
+
+In this lesson, we covered:
+
+Structures are a means of modeling real-life objects programmatically.
+How to create a structure using the struct keyword along with properties and methods.
+Structure properties are used to describe the characteristics and values of the structure.
+To model individual objects, we can create instances of structs, which may have unique property values.
+We can access and edit properties using dot notation.
+If we know that most of our instances will have a specific property value, we can assign default property values inside the struct.
+Using the init() method allows us to provide an instance with specific values for the structure’s given properties.
+Even without an init() method, structs come with a default memberwise initialization method that can 
+assign values to declared properties inside a struct.
+Structures can have methods that are functions accessible to their instances.
+Structures are value types, any copied struct that has its properties altered will not 
+affect the original structure from which it was copied.
+🙌❗
+*/
 
 
 
