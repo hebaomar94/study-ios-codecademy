@@ -486,9 +486,73 @@ func properAttire(occasion: String, shoes: inout String) {
 properAttire(occasion: "Workout", shoes: &currentShoes)
  
 print(currentShoes)
+//STRUCTURES
+//Creating a Structure
+// Write your code below: 📚
+//through structure we can build data 
+//structure features 
+//struct Name { properties }
+struct Dog {
+  var age: Int
+  var isGood: Bool
+}
 
+//Creating an Instance
+//Instances are how we create individual objects using a structure.
+struct Book {
+  var pages = 0
+  var title = ""
+}
 
+// Write your code below: 📚
+var myFavBook = Book()
+//Accessing and Editing Properties
 
+struct Book {
+  var pages = 0
+  var title = ""
+}
+
+var myFavBook = Book()
+
+// Write your code below: 📚
+
+myFavBook.pages = 640
+print(myFavBook.pages)
+myFavBook.title = "the silence" 
+print(myFavBook.title)
+
+//The Init Method
+/*
+The init() method is special since it doesn’t require the func keyword and gets called upon instance creation. 
+Like functions, methods can have parameters but don’t need to have any. Another unique feature is that the init() method uses 
+the self keyword to reference itself. Let’s see init() in action:
+
+struct Dog {
+  var age : Int
+  var isGood : Bool
+ 
+  init (age: Int, isGood: Bool) {
+    self.age = age
+    self.isGood = isGood
+  }
+}
+ 
+// Using the init() method:
+var bucket = Dog(age: 4, isGood: true)
+print(bucket.age)    // Prints: 4
+print(bucket.isGood) // Prints: true */
+struct Book {
+  var title: String
+  var pages: Int
+
+  // Add your code below 📚
+  init(title: String, pages: Int) {
+    self.title = title
+    self.pages = pages
+  }
+}
+var theHobbit = Book(title: "The Hobbit" , pages: 300)
 
 
 
