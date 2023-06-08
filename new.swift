@@ -707,7 +707,8 @@ affect the original structure from which it was copied.
 
 
 
-
+//What is the purpose of an instance’s property?
+//represent the complex characteristic of real obj
 
 
 
