@@ -554,6 +554,17 @@ struct Book {
 }
 var theHobbit = Book(title: "The Hobbit" , pages: 300)
 
+//Memberwise Initialization
+//here we dont need to init method we acces through declaration like 
+// Add your code below 🎹 🎸 🥁 
+struct Band  {
+var genre : String
+var members : Int
+var isActive : Bool
+}
+//creat instance of band
+var maroon5 = Band (genre: "pop", members: 5, isActive: true  )
+
 
 
 
