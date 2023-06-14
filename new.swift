@@ -761,6 +761,14 @@ grep
 Global regular expression, allows for searching contents of files or folders
 
 */
+/*grep global regular expression print
+grep +file name // it will bring all file with filename but its sensitive towords capital and S
+grep -i + namefile
+find all the same name in ay place in sentence 
+grap -w name file 
+bring only the name you enter 
+ls /bin/grep filetype */
+
 
 
 
