@@ -769,6 +769,9 @@ grap -w name file
 bring only the name you enter 
 ls /bin/grep filetype */
 
+/*This level is typically used when creating frameworks so that modules that import 
+the framework can access its properties and methods.
+*/
 
 
 
