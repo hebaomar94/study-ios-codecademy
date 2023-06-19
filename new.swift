@@ -772,7 +772,11 @@ ls /bin/grep filetype */
 /*This level is typically used when creating frameworks so that modules that import 
 the framework can access its properties and methods.
 */
+/*
+he git blame command is used to look at changes of a specific file and show the dates, times, 
+and users who made the changes. By now, you should know how to use commands like git log to see the changes made. */
 
+git blame name_of_file
 
 
 
