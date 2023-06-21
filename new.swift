@@ -851,6 +851,198 @@ alphaOffice.printTotalRevenue()
 
 //Creating Setters for Computed Properties
 
+struct Office {  
+    let paperclipCost = 10
+    private var paperclipSales: Int
+    
+    var totalRevenue: Int {
+        get {
+            return (paperclipCost * paperclipSales) + getSecretRevenue()
+        }
+        // 1 + 2: Add a setter
+        set (newTotalRevenue) {
+
+            paperclipSales = (newTotalRevenue - getSecretRevenue()) / paperclipCost
+           }
+
+    }
+
+    init(paperclipSales: Int){
+        self.paperclipSales = paperclipSales
+    }
+    
+    private func getSecretRevenue() -> Int {
+        return 100
+    }
+        
+    func printTotalRevenue() {
+        print("Our total revenue this month is \(totalRevenue)")
+    }
+}
+
+var alphaOffice = Office(paperclipSales: 18)
+
+// 3: Set the total revenue
+
+alphaOffice.totalRevenue = 400
+alphaOffice.printTotalRevenue()
+//----------------------------------------------------------------------------------------------------------------------------------------
+//Using Property Observers
+struct Office {
+    var paperclipCost = 10
+    private var paperclipSales: Int {
+        willSet {
+            print("We adjusted the sales to \(newValue) paperclips.")
+        }
+        didSet {
+          print("Originally, we sold \(oldValue) paperclips.")
+        }
+    }
+    var totalRevenue: Int {
+        get {
+            return (paperclipSales * paperclipCost) + getSecretRevenue()
+        }
+        set(newTotalRevenue) {
+            paperclipSales = (newTotalRevenue - getSecretRevenue()) / paperclipCost
+        }
+    }
+
+    init(paperclipSales: Int) {
+        self.paperclipSales = paperclipSales
+    }
+    
+    private func getSecretRevenue() -> Int {
+        return 100
+    }
+    
+    func printTotalRevenue() {
+        print("Our total revenue this month is \(totalRevenue)")
+    }
+}
+
+var alphaOffice = Office(paperclipSales: 18)
+alphaOffice.totalRevenue = 400
+alphaOffice.printTotalRevenue()
+//----------------------------------------------------------------------------------------------------------------------------------------
+//Implementing a Private Setter
+struct Office {
+    var paperclipCost = 10
+
+    // 1: Give the paperclipSales property a private setter
+    private(set)  var paperclipSales: Int {
+        willSet {
+            print("We adjusted the sales to \(newValue) paperclips.")
+        }
+        didSet {
+            print("Originally we sold \(oldValue) paperclips.")
+        }
+    }
+    
+    var totalRevenue: Int {
+        get {
+            return (paperclipSales * paperclipCost) + getSecretRevenue()
+        }
+        set(newTotalRevenue) {
+            paperclipSales = (newTotalRevenue - getSecretRevenue()) / paperclipCost
+        }
+    }
+
+    init(paperclipSales: Int) {
+        self.paperclipSales = paperclipSales
+    }
+    
+    private func getSecretRevenue() -> Int {
+        return 100
+    }
+    
+    func printTotalRevenue() {
+        print("Our total revenue this month is \(totalRevenue).")
+    }    
+}
+
+var alphaOffice = Office(paperclipSales: 18)
+alphaOffice.totalRevenue = 400
+alphaOffice.printTotalRevenue()
+
+// 2: Print the value of paperclipSales to the console.
+print(alphaOffice.paperclipSales)
+
+
+// 3 + 4: Attempt to set the value of paperclipSales.
+ //alphaOffice.paperclipSales = 48
+
+//----------------------------------------------------------------------------------------------------------------------------------------
+//Extensions
+//helpful to divide the code into several different sections. By using an extension
+struct Cat {
+    let name: String
+    let age: Int
+}
+ 
+extension Cat {
+    static let famousCats = [
+        Cat(name: "Stubbs", age: 20), 
+        Cat(name: "Sweet Tart", age: 12), 
+        Cat(name: "Hank the Cat", age: 13)
+    ]
+}
+ 
+print(Cat.famousCats.count) // prints3
+
+
+struct Office {
+    let paperclipCost = 10
+    static var paperclipSalesRecord: Int = 0
+    private var paperclipSales: Int  {
+        willSet {
+            print("We adjusted the sales to \(newValue) paperclips")
+            if newValue > Office.paperclipSalesRecord {
+              Office.paperclipSalesRecord = newValue
+            }
+        }
+        didSet {
+            print("Originally we sold \(oldValue) paperclips")
+        }
+    }
+    
+    var totalRevenue : Int {
+        get {
+            return (paperclipSales * paperclipCost) + getSecretRevenue()
+        }
+        set(newTotalRevenue) {
+            paperclipSales = (newTotalRevenue - getSecretRevenue()) / paperclipCost
+        }
+    }
+
+    init(paperclipSales: Int){
+        self.paperclipSales = paperclipSales
+    }
+    private func getSecretRevenue() -> Int {
+        return 100
+    }
+    func printTotalRevenue() {
+        print("Our total revenue this month is \(totalRevenue)")
+    }
+}
+
+// Write your extension here:
+
+extension Office {
+    static func printCurrentRecord() {
+        print("The current record for paperclip sales is \(paperclipSalesRecord)")
+    }
+    var paperclipColor: String { return "gray" }
+}
+
+var alphaOffice = Office(paperclipSales: 18)
+alphaOffice.totalRevenue = 400
+
+// Use the new methods and properties here:
+
+Office.printCurrentRecord()
+print("Alpha Office’s paperclips are \(alphaOffice.paperclipColor)")
+
+
 
 
 
