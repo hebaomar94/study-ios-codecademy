@@ -811,8 +811,43 @@ alphaOffice.printTotalRevenue()
 //----------------------------------------------------------------------------------------------------------------------------------------
 //Defining a Private Method
 
+struct Office {    
+    let paperclipCost = 10
+    private var paperclipSales: Int
+    
+    init(paperclipSales: Int) {
+        self.paperclipSales = paperclipSales
+    }
+    
+    // 1: Create a private method named getSecretRevenue()
+    private func getSecretRevenue() ->  Int {
+        return 100
+    }
+    func printTotalRevenue() {
+        // 2: Add the secret revenue to totalRevenue
+        let totalRevenue = (paperclipSales * paperclipCost) + getSecretRevenue()
+        print("Our total revenue this month is \(totalRevenue).")
+    }
+    
+}
 
+let alphaOffice = Office(paperclipSales: 18)
+alphaOffice.printTotalRevenue()
+// 3: Attempt to call the private method
+//alphaOffice.getSecretRevenue()
 
+//----------------------------------------------------------------------------------------------------------------------------------------
+//Using Read-only Computed Properties
+//Make a read-only computed property named totalRevenue of type Int that returns the product of ( paperclipCost and paperclipSales ) added to getSecretRevenue().
+  var totalRevenue: Int {
+      get{
+         return (paperclipCost * paperclipSales) +
+         getSecretRevenue()
+      }
+     
+    }
+
+//----------------------------------------------------------------------------------------------------------------------------------------
 
 
 
