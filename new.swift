@@ -778,6 +778,7 @@ and users who made the changes. By now, you should know how to use commands like
 
 git blame name_of_file
 
+//----------------------------------------------------------------------------------------------------------------------------------------
 
 
 //21/6/2023
@@ -807,7 +808,8 @@ alphaOffice.printTotalRevenue()
 // 6 + 7: Attempt to access a private property
 //invalidAccess
 //let invalidAccess = alphaOffice.paperclipSales 
-
+//----------------------------------------------------------------------------------------------------------------------------------------
+//Defining a Private Method
 
 
 
