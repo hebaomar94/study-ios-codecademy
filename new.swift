@@ -1123,7 +1123,11 @@ print(goldBars)
 goldBars = unlockTreasureChest(inventory: goldBars)
 print(goldBars)
 
-
+//----------------
+//math-func
+var mathFunction: (Int ,Int) -> Int = addTwoInts 
+print ("Result: \(mathFunction(5, 7)")
+       
 
 
 
