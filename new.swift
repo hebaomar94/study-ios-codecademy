@@ -1149,5 +1149,7 @@ incrementInventory(&goldBars, by: 300)
 print(goldBars)
 incrementInventory(&goldBars, by: 50)
 print(goldBars)
-
+/*In Swift, when you pass a variable as an inout argument to a function, 
+you need to use the & symbol before the variable name to indicate that you want to pass the variable itself and allow the function to 
+modify its value. */
 
