@@ -1090,66 +1090,24 @@ print(laRatatouille.type)
 print(laRatatouille.rating)
 print(laRatatouille.delivery)
 //-----------------------------------------------------
-//functioin: dry dont repeat ure self
-var a =3
-var b =4
-var c =a+b
-print(c)
+//Inheritance
 
-//if we need to use this more we can make it in block of code 
-func addTwoNum(){
-var a =3
-var b =4
-var c =a+b
-print(c)
-}
-addTwoNum()
+class Order {
+  var items = ["milch, berne, apfel"]
+  var subtotal = 45
+  var tip = 2
+  var total = 47
 
-//we can use also parameter
-func addTwoNum(a:Int, b:Int){
-var c =a+b
-print(c)
+  func printReceipt() {
+    print("Items:     \(items)")
+    print("Subtotal:  $\(subtotal)")
+    print("Tip:       $\(tip)")
+    print("Total:     $\(total)")
+  }
 }
-addTwoNum(a:3 , b: 4)
-//practising
-var goldBars = 0
-func unlockTreasureChest (inventory: Int ) -> Int {
-   return inventory + 100
-}
-goldBars = unlockTreasureChest(inventory: goldBars)
-print(goldBars)
-goldBars = unlockTreasureChest(inventory: goldBars)
-print(goldBars)
-goldBars = unlockTreasureChest(inventory: goldBars)
-print(goldBars)
 
-//----------------
-//math-func
-var mathFunction: (Int ,Int) -> Int = addTwoInts 
-print ("Result: \(mathFunction(5, 7)")
-//----
-func hiThere(_ fn: String, _ sn: String)  {
-  let fullname = fn + " " + sn
-  print("Hi there \(fullname)")
-} 
-hiThere("Fred", "Bloggs")
-//
-       var goldBars = 0
-//argument label (by)
-func incrementInventory(_ inventory: inout Int, by amount: Int = 100) {
-    return inventory += amount
+// Write your code below 🧾
+class DeliveryOrder: Order {
+  var deliveryFee = 2.0
 }
-incrementInventory(&goldBars)
-print(goldBars)
-incrementInventory(&goldBars)
-print(goldBars)
-incrementInventory(&goldBars)
-print(goldBars)
-incrementInventory(&goldBars, by: 300)
-print(goldBars)
-incrementInventory(&goldBars, by: 50)
-print(goldBars)
-/*In Swift, when you pass a variable as an inout argument to a function, 
-you need to use the & symbol before the variable name to indicate that you want to pass the variable itself and allow the function to 
-modify its value. */
-
+//Overriding Methods
