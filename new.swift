@@ -1089,7 +1089,28 @@ print(laRatatouille.name)
 print(laRatatouille.type)
 print(laRatatouille.rating)
 print(laRatatouille.delivery)
+//-----------------------------------------------------
+//functioin: dry dont repeat ure self
+var a =3
+var b =4
+var c =a+b
+print(c)
 
+//if we need to use this more we can make it in block of code 
+func addTwoNum(){
+var a =3
+var b =4
+var c =a+b
+print(c)
+}
+addTwoNum()
+
+//we can use also parameter
+func addTwoNum(a:Int, b:Int){
+var c =a+b
+print(c)
+}
+addTwoNum(a:3 , b: 4)
 
 
 
