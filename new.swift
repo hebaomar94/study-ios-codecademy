@@ -1127,7 +1127,27 @@ print(goldBars)
 //math-func
 var mathFunction: (Int ,Int) -> Int = addTwoInts 
 print ("Result: \(mathFunction(5, 7)")
-       
-
+//----
+func hiThere(_ fn: String, _ sn: String)  {
+  let fullname = fn + " " + sn
+  print("Hi there \(fullname)")
+} 
+hiThere("Fred", "Bloggs")
+//
+       var goldBars = 0
+//argument label (by)
+func incrementInventory(_ inventory: inout Int, by amount: Int = 100) {
+    return inventory += amount
+}
+incrementInventory(&goldBars)
+print(goldBars)
+incrementInventory(&goldBars)
+print(goldBars)
+incrementInventory(&goldBars)
+print(goldBars)
+incrementInventory(&goldBars, by: 300)
+print(goldBars)
+incrementInventory(&goldBars, by: 50)
+print(goldBars)
 
 
